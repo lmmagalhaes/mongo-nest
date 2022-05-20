@@ -10,7 +10,7 @@ export default class ListByTermBookService {
     private bookModel: Model<Books>,
   ) {}
 
-  async findByTerm(title: string): Promise<Books[]> {
+  async findByTerm(): Promise<Books[]> {
     return this.bookModel.find({ title: { $regex: /^input.term/ } }).exec();
   }
 }
