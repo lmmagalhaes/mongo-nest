@@ -11,6 +11,6 @@ export default class ListByTermBookService {
   ) {}
 
   async findByTerm(title: string): Promise<Books[]> {
-    return this.bookModel.find({ title: { $regex: /^input.term/ } });
+    return this.bookModel.find({ title: { $regex: /^input.term/ } }).exec();
   }
 }

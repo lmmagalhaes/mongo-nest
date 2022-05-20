@@ -11,7 +11,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
       ignoreEnvFile: false,
       isGlobal: true,
       cache: true,
-      envFilePath: ['.env'],
+      envFilePath: ['.development.env'],
     }),
     GraphQLModule.forRoot({
       autoSchemaFile: true,
