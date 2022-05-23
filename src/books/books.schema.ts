@@ -10,6 +10,9 @@ export class Books extends Document {
   author: string;
 
   @Prop()
+  term: string;
+
+  @Prop()
   deletedAt: Date;
 }
 
